@@ -56,10 +56,10 @@ textY = 10
 over_font = pygame.font.Font("freesansbold.ttf", 64)
 
 def show_score(x,y):
-    score = font.render("Score : " + str(score_value), True, (225, 225, 225))
+    score = font.render("Score : " + str(score_value), True, (255, 255, 255))
     screen.blit(score,(x,y))
 def game_over_text():
-    over_text = over_font.render("GAME OVER", True, (225,225,225))
+    over_text = over_font.render("GAME OVER", True, (255,255,255))
     screen.blit(over_text, (200,250))
 def player(x,y):
     screen.blit(playerimg,(x,y))
@@ -108,7 +108,7 @@ while running:
             score_value += 1
             enemyX[i] = random.randint(0, SCREEN_WIDTH - 64)
             enemyY[i] = random.randint(ENEMY_START_Y_MIN, ENEMY_START_Y_MAX)
-    enemy(enemyX[i], enemyY[i], i)
+        enemy(enemyX[i], enemyY[i], i)
 
     if bulletY <= 0:
         bulletY = PLAYER_START_Y
